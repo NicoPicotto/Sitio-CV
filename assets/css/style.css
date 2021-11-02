@@ -1,0 +1,302 @@
+body {
+  margin: 0;
+  font-family: "Righteous", cursive;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  height: 3em;
+  width: 100%;
+  display: flex;
+  flex: row;
+  align-items: center;
+}
+
+.menu-open i {
+  font-size: 2em;
+  padding-left: 10px;
+}
+
+.menu-close i {
+  font-size: 2em;
+  padding: 10px;
+}
+
+.side-nav {
+  position: relative;
+  transition: transform 0.35s ease-out;
+  background: #F2C53D;
+  height: 100%;
+  width: 80%;
+  max-width: 400px;
+  box-shadow: 0 5px 6px 4px rgba(0, 0, 0, 0.2);
+  transform: translateX(-102%);
+  will-change: transform;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-nav-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1000;
+}
+.side-nav-container:before {
+  transition: opacity 0.3s cubic-bezier(0, 0, 0.3, 1);
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  will-change: opacity;
+  opacity: 0;
+  pointer-events: none;
+}
+.side-nav-container .seccionesContainer {
+  display: flex;
+  flex-direction: column;
+}
+.side-nav-container .seccionesContainer .menuSecciones {
+  display: flex;
+  text-decoration: none;
+  color: #777579;
+  padding: 0.7em;
+}
+.side-nav-container .seccionesContainer .menuSecciones:hover {
+  background-color: #777579;
+  color: #F2C53D;
+}
+
+.side-nav-animatable .side-nav {
+  transition: transform 0.33s cubic-bexier(0, 0, 0.3, 0.1);
+}
+.side-nav-animatable.side-nav-visible .side-nav {
+  transition: transform 0.33s cubic-bezier(0, 0, 0.3, 1);
+}
+
+.side-nav-visible {
+  pointer-events: auto;
+}
+.side-nav-visible .side-nav {
+  transform: none;
+}
+.side-nav-visible:before {
+  opacity: 1;
+}
+
+.sobreMi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sobreMi .fotoContainer {
+  display: flex;
+}
+.sobreMi .infoContainer {
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  background-color: #F2C53D;
+  align-items: center;
+  border-radius: 1em;
+  color: #777579;
+}
+.sobreMi .infoContainer h1 {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin: 0;
+  padding-top: 0.5em;
+}
+.sobreMi .infoContainer h2 {
+  font-size: 1em;
+  font-weight: lighter;
+  padding: 1em;
+  margin: 0;
+}
+
+.educacion {
+  display: flex;
+  width: 100%;
+  margin-top: 2em;
+  padding-top: 3em;
+  background-color: #f2c53d;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.educacion .card {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  border-radius: 2em;
+  background-color: white;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  padding: 1em;
+  flex-direction: column;
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.466);
+  transition: 0.3s ease-in-out;
+}
+.educacion .card .imgContainer {
+  position: relative;
+  width: 15em;
+  height: 11em;
+  top: -5em;
+}
+.educacion .card .imgContainer img {
+  max-width: 100%;
+  border-radius: 10em;
+}
+.educacion .card h1 {
+  display: flex;
+  margin-top: 0;
+  font-size: 1.5em;
+  color: #777579;
+}
+.educacion .card button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+.educacion .card button i {
+  display: flex;
+  font-size: 3em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.educacion .card button i:hover {
+  margin-top: 0.1em;
+}
+.educacion .card .textContainer {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.educacion .card .textContainer .skillsContainer {
+  display: flex;
+  align-items: center;
+}
+.educacion .card .textContainer .skillsContainer img {
+  display: flex;
+  height: 2em;
+  margin-right: 0.5em;
+}
+.educacion .card .textContainer .skillsContainer h2 {
+  font-size: 1em;
+  color: #777579;
+  font-weight: lighter;
+}
+
+.experienciaLaboral {
+  display: flex;
+  width: 100%;
+  margin-top: 2em;
+  padding-top: 3em;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.experienciaLaboral .card {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  border-radius: 2em;
+  background-color: #f2c53d;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  padding: 1em;
+  flex-direction: column;
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.466);
+  transition: 0.3s ease-in-out;
+}
+.experienciaLaboral .card .imgContainer {
+  position: relative;
+  width: 15em;
+  height: 11em;
+  top: -5em;
+}
+.experienciaLaboral .card .imgContainer img {
+  max-width: 100%;
+  border-radius: 10em;
+}
+.experienciaLaboral .card h1 {
+  display: flex;
+  margin-top: 0;
+  font-size: 1.5em;
+  color: #777579;
+  margin-bottom: 0;
+}
+.experienciaLaboral .card h2 {
+  display: flex;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 1em;
+  color: #777579;
+  font-weight: lighter;
+}
+.experienciaLaboral .card button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+.experienciaLaboral .card button i {
+  display: flex;
+  font-size: 3em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.experienciaLaboral .card button i:hover {
+  margin-top: 0.1em;
+}
+.experienciaLaboral .card .textContainer {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.experienciaLaboral .card .textContainer .skillsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.experienciaLaboral .card .textContainer .skillsContainer .tipoComercio {
+  font-size: 1em;
+  margin-bottom: 0;
+  color: #777579;
+  font-weight: lighter;
+  background-color: white;
+  padding: 0.5em;
+  border-radius: 0.7em;
+}
+.experienciaLaboral .card .textContainer .skillsContainer p {
+  font-size: 1em;
+  margin-bottom: 0;
+  color: #777579;
+  font-weight: lighter;
+}
+
+/*# sourceMappingURL=style.css.map */
