@@ -3,8 +3,14 @@
     flex-direction: column;
     align-items: center;
 
+    @media (min-width: 1200px){
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+
     .fotoContainer{
         display: flex;
+        z-index: 2;
     }
 
     .infoContainer{
@@ -16,11 +22,24 @@
         border-radius: 1em;
         color: #777579;
 
+
+        @media (min-width: 1200px){
+            width: 30%;
+            align-items: left;
+            padding-right: 5em;
+            margin-right: -8em;
+        }
+
         h1{
             font-weight: bold;
             font-size: 1.5em;
             margin: 0;
+            padding-left: 1em;
             padding-top: 0.5em;
+
+            @media (min-width: 1200px){
+                font-size: 2em;
+            }
         }
 
         h2{
@@ -28,6 +47,10 @@
             font-weight: lighter;
             padding: 1em;
             margin: 0;
+
+            @media (min-width: 1200px){
+                font-size: 1.5em;
+            }
         }
     }
 }

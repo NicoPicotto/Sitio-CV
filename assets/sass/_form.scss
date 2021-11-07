@@ -18,6 +18,10 @@
         border-radius: 2em;
         align-items: center;
 
+        @media (min-width: 1200px){
+            width: 40%;
+        }
+
         .formInput {
             width: 80%;
             height: 1.5em;

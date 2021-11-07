@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/style.css" />
@@ -24,16 +25,16 @@
                     <i class="bx bx-menu" style="color: #ebebf2"></i>
                 </a>
                 <div class="seccionesContainer">
-                    <a href="" class="menuSecciones">Sobre mí</a>
-                    <a href="" class="menuSecciones">Educación</a>
-                    <a href="" class="menuSecciones">Experiencia laboral</a>
-                    <a href="" class="menuSecciones">Porfolio</a>
-                    <a href="" class="menuSecciones">Contactame</a>
+                    <a href="#sobreMi" class="menuSecciones">Sobre mí</a>
+                    <a href="#educacion" class="menuSecciones">Educación</a>
+                    <a href="#experienciaLaboral" class="menuSecciones">Experiencia laboral</a>
+                    <a href="#porfolio" class="menuSecciones">Porfolio</a>
+                    <a href="#form" class="menuSecciones">Contactame</a>
                 </div>
             </div>
         </div>
     </header>
-    <section class="sobreMi">
+    <section class="sobreMi" id="sobreMi">
         <div class="fotoContainer">
             <img src="assets/img/profile.png" alt="Foto Perfil" />
         </div>
@@ -47,7 +48,7 @@
             </h2>
         </div>
     </section>
-    <section class="educacion">
+    <section class="educacion" id="educacion">
         <div class="card">
             <div class="imgContainer">
                 <img src="assets/img/logoUM.jpg" alt="Logo UM">
@@ -136,13 +137,13 @@
             </div>
         </div>
     </section>
-    <section class="experienciaLaboral">
+    <section class="experienciaLaboral" id="experienciaLaboral">
         <div class="card">
             <div class="imgContainer">
                 <img src="assets/img/logo-pdm.jpg" alt="Logo Prodeman">
             </div>
             <h1>Prodeman SA</h1>
-            <h2>Marketing y Diseño</h2>
+            <h2>Marketing, Diseño y Desarrollo</h2>
             <h2>2016 - Actualidad</h2>
             <button type="button" class="collapsible"><i type="button" class='bx bx-chevrons-down' style='color:#ffffff'  ></i></button>
             <div id="textContainer" class="textContainer">
@@ -198,27 +199,27 @@
             </div>
         </div>
     </section>
-    <section class="porfolio">
+    <section class="porfolio" id="porfolio">
         <div class="card">
             <div class="imgContainer">
                 <img src="assets/img/logoBe.jpg" alt="Logo Behance">
             </div>
             <h1>Proyectos Diseño Gráfico</h1>
-            <a href="https://www.behance.net/nicolaspicotto" target="_blank" rel="noopener noreferrer" type="button" class="collapsible"><i type="button" class='bx bx-link' style='color:#f2c53d'  ></i></a>
+            <a href="https://www.behance.net/nicolaspicotto" target="_blank" rel="noopener noreferrer" type="button" class="collapsible"><i type="button" class='bx bx-link' style='color:#f2c53d'  ></i><span>Ir a Behance</span></a>
         </div>
         <div class="card">
             <div class="imgContainer">
                 <img src="assets/img/logoGitHub.jpg" alt="Logo GitHub">
             </div>
             <h1>Proyectos Desarrollo Web</h1>
-            <a href="https://github.com/NicoPicotto" target="_blank" rel="noopener noreferrer" type="button" class="collapsible"><i type="button" class='bx bx-link' style='color:#f2c53d'  ></i></a>
+            <a href="https://github.com/NicoPicotto" target="_blank" rel="noopener noreferrer" type="button" class="collapsible"><i type="button" class='bx bx-link' style='color:#f2c53d'  ></i><span>Ir a Github</span></a>
         </div>
     </section>
     <section class="form">
         <form id="form">
             <h2 id="formTitulo">¡Comunicate conmigo!</h2>
             <input type="text" id="formNombre" class="formInput" placeholder="Nombre" name="name">
-            <input type="email" id="formMail" class="formInput" placeholder="E-mail" name="email">
+            <input type="text" id="formMail" class="formInput" placeholder="E-mail" name="email">
             <input type="text" id="formAsunto" class="formInput" placeholder="Asunto" name="asunto">
             <textarea type="text" id="formMensaje" class="formTextArea" placeholder="Mensaje" name="msg"></textarea>
             <button type="button" class="formSubmit" name="enviar">Enviar mensaje</button>
@@ -228,8 +229,12 @@
         include("correo.php");
         ?>
     </section>
+    <footer class="footer">
+        <h3>Todos los derechos reservados ©</h3>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.11.2/toastify.js"></script>
+    <script src="assets/js/header.js"></script>
     <script src="assets/js/nav.js"></script>
     <script src="assets/js/form.js"></script>
     <script src="assets/js/educacion.js"></script>
