@@ -11,23 +11,29 @@
     .fotoContainer{
         display: flex;
         z-index: 2;
+        margin-left: -2em;
+
+        @media (min-width: 1200px){
+            margin-left: 0;
+        }
     }
 
     .infoContainer{
         display: flex;
-        width: 80%;
+        width: 60%;
         flex-direction: column;
         background-color: #F2C53D;
         align-items: center;
         border-radius: 1em;
         color: #777579;
+        text-align: center;
 
 
         @media (min-width: 1200px){
             width: 30%;
-            align-items: left;
+            align-items: flex-start;
             padding-right: 5em;
-            margin-right: -8em;
+            margin-right: -10em;
         }
 
         h1{
