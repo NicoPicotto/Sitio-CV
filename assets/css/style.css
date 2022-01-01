@@ -132,7 +132,6 @@ nav {
   align-items: center;
   border-radius: 1em;
   color: #777579;
-  text-align: center;
 }
 @media (min-width: 1200px) {
   .sobreMi .infoContainer {
@@ -140,6 +139,7 @@ nav {
     align-items: flex-start;
     padding-right: 5em;
     margin-right: -10em;
+    text-align: center;
   }
 }
 .sobreMi .infoContainer h1 {
@@ -151,6 +151,7 @@ nav {
 @media (min-width: 1200px) {
   .sobreMi .infoContainer h1 {
     font-size: 2em;
+    padding-left: 1em;
   }
 }
 .sobreMi .infoContainer h2 {
@@ -158,10 +159,12 @@ nav {
   font-weight: lighter;
   padding: 1em;
   margin: 0;
+  text-align: center;
 }
 @media (min-width: 1200px) {
   .sobreMi .infoContainer h2 {
     font-size: 1.5em;
+    text-align: left;
   }
 }
 

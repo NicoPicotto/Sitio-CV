@@ -26,7 +26,6 @@
         align-items: center;
         border-radius: 1em;
         color: #777579;
-        text-align: center;
 
 
         @media (min-width: 1200px){
@@ -34,6 +33,7 @@
             align-items: flex-start;
             padding-right: 5em;
             margin-right: -10em;
+            text-align: center;
         }
 
         h1{
@@ -44,6 +44,7 @@
 
             @media (min-width: 1200px){
                 font-size: 2em;
+                padding-left: 1em;
             }
         }
 
@@ -52,9 +53,11 @@
             font-weight: lighter;
             padding: 1em;
             margin: 0;
+            text-align: center;
 
             @media (min-width: 1200px){
                 font-size: 1.5em;
+                text-align: left;
             }
         }
     }
