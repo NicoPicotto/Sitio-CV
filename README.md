@@ -1,4 +1,4 @@
-# Sitio personal - Nicolás Picotto
+# Sitio personal tipo CV - Nicolás Picotto
 
 _Este sitio tiene como fin aglomerar en un lugar toda mi información académica, laboral, porfolios y links para contactarme._
 
